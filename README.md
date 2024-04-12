@@ -1,6 +1,6 @@
-#Open Source Chat Dapp Demo
+# Open Source Chat Dapp Demo
 
-A decentralized chat app built with Gun js
+A peer to peer chat app built with Gun js
 
 - Try the Demo
 
