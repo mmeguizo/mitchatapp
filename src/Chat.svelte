@@ -64,9 +64,6 @@
     const secret = await SEA.encrypt(newMessage, "#foo");
     const message = user.get("all").set({ what: secret });
     const index = new Date().toISOString();
-
-    console.log("index", index);
-    console.log("message", message);
     sendNewMessage(message, index);
     newMessage = '';
     autoScroll();
