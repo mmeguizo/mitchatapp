@@ -1,16 +1,14 @@
 <script>
-  import { username, user } from './user';
+  import { username } from './user';
+  import { signout } from '../functions/header';
 
-  function signout() {
-    user.leave();
-    username.set('');
+ function UserSignout(){
+  signout()
   }
 
 
-  /*
-  
-  string[0].toUpperCase() + string.slice(1).toLowerCase();
-  */
+
+
 </script>
 
 <header>
@@ -20,7 +18,7 @@
       <span>Hi <strong>{$username[0].toUpperCase() + $username.slice(1).toLowerCase()}</strong></span>
       <img src={`https://i.pravatar.cc/150?u=${$username}`} alt="avatar" /> 
     </div>
-    <button class="signout-button" on:click={signout}>Sign Out</button>
+    <button class="signout-button" on:click={UserSignout}>Sign Out</button>
     {:else}
 
       <h3>Open Source Chat</h3>

@@ -32,7 +32,6 @@
 
   onMount(() => {
 
-      console.log("onmount");
 
     var match = {
       // lexical queries are kind of like a limited RegEx or Glob.
@@ -50,7 +49,6 @@
         if (data) {
           // Key for end-to-end encryption
           const key = '#foo';
-            console.log({ KEY : await db.user(data).get('alias') });
           var message = {
             // transform the data
             who: await db.user(data).get('alias'), // a user might lie who they are! So let the user system detect whose data it is.
@@ -60,7 +58,6 @@
 
           if (message.what) {
             messages = [...messages.slice(-100), message].sort((a, b) => a.when - b.when);
-            console.log({ MESSAGE : messages })
 
             if (canAutoScroll) {
               autoScroll();
