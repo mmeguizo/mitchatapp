@@ -58,6 +58,9 @@
           }
         }
       });
+
+
+      console.log('messages', messages)
   });
 
   export const sendMessage = async function sendMessage() {

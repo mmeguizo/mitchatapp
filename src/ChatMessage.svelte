@@ -2,9 +2,11 @@
   export let message;
   export let sender;
 
+  console.log(sender)
+
   const messageClass = message.who === sender ? 'sent' : 'received';
 
-  const avatar = message.who === sender ? `https://i.pravatar.cc/150?u=${message.sender}` : `https://i.pravatar.cc/150?u=${message.who}`;
+  const avatar = `https://i.pravatar.cc/150?u=${message.who}`;
   
   const ts = new Date(message.when);
 </script>
